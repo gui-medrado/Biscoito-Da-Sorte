@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+main {
+    background-color: white;
+    padding: 3rem 4rem 4rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    width: min(26.75rem, 90%);
+    min-height: 26.5rem;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+h1 {
+    color: #34355B;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.55rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 0.87rem;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #FF9500;
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    background: #FF9500;
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 3.71rem;
+
+    transition: border 350ms, color 350ms, background-color 350ms;
+}
+
+button:hover {
+    color: #FF9500;
+    background-color: #fff;
+}
+
+/* Especificos */
+.screen1, .screen2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cookieClosed {
+    cursor: pointer;
+}
+.shake {
+    animation-name: shake;
+    animation-duration: 350ms;
+    animation-iteration-count: infinite;
+}
+.screen1 p {
+    color: #34355B;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1.65rem;
+    
+}
+.screen2 p {
+    margin: 0.19rem 0 4.82rem;
+    color: #000;
+    text-align: center;
+    font-family: Dancing Script;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    padding: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    animation-name: slide-up-opacity;
+    animation-duration: 2s;
+}
+
+@keyframes slide-up-opacity {
+    0% {
+      transform: translateY(95px) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+      opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(7deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
